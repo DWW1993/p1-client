@@ -7,7 +7,7 @@ import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 import { SingleComponent } from './single/single.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    // { path: '', redirectTo: '/home', pathMatch: 'full' },
   ];
    
   @NgModule({

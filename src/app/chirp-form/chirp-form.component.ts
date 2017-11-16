@@ -18,15 +18,17 @@ export class ChirpFormComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private chirpService: chirpService
-  ) { this.form = this.fb.group({
-    user: ['', Validators.required],
-    message: ['', Validators.compose([Validators.required, Validators.maxLength(120)])],
-    location: ['', Validators.required]
-  })
-
+  ) { 
+    this.form = this.fb.group({
+    message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
+    image: ['']
+    })
   }
 
   ngOnInit(): void {
   }
 
+  testFunction() {
+    console.log("Button Working")
+  }
 }

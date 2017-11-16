@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
@@ -28,9 +28,15 @@ import { AppRoutingModule } from "./app-routing.module";
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    AppRoutingModule,
     MatButtonModule, 
-    MatCheckboxModule
-    
+    MatCheckboxModule,
+    MatGridListModule, 
+    MatCardModule, 
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatSelectModule, 
+    MatToolbarModule
   ],
   providers: [
     chirpService
