@@ -5,8 +5,6 @@ import { Location } from '@angular/common';
 
 import { iChirp } from "../chirpInterface";
 import { chirpService } from "../services/chirp.service";
-import { ListComponent } from '../list/list.component';
-import { SingleComponent } from "../single/single.component";
 
 @Component({
   selector: 'app-chirp-form',
@@ -14,10 +12,21 @@ import { SingleComponent } from "../single/single.component";
   styleUrls: ['./chirp-form.component.scss']
 })
 export class ChirpFormComponent implements OnInit {
+  form: FormGroup;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private fb: FormBuilder,
+    private chirpService: chirpService
+  ) { this.form = this.fb.group({
+    user: ['', Validators.required],
+    message: ['', Validators.compose([Validators.required, Validators.maxLength(120)])],
+    location: ['', Validators.required]
+  })
 
-  ngOnInit() {
+  }
+
+  ngOnInit(): void {
   }
 
 }

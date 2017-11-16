@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 
 import { iChirp } from "./chirpInterface";
 import { chirpService } from "./services/chirp.service";
+import { ChirpFormComponent } from "./chirp-form/chirp-form.component";
 
 @Component({
   selector: 'app-root',

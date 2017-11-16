@@ -29,7 +29,7 @@ import { AppRoutingModule } from "./app-routing.module";
     ReactiveFormsModule,
     FormsModule,
     MatButtonModule, 
-    MatCheckboxModule,
+    MatCheckboxModule
     
   ],
   providers: [
