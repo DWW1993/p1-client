@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { ChirpService } from './services/chirp.service';
 import { AppRoutingModule } from './app-routing.module';
 import { FormBuilder } from '@angular/forms/src/form_builder';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FormBuilder } from '@angular/forms/src/form_builder';
     SingleComponent,
     ChirpFormComponent,
     LoginComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
