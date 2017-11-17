@@ -1,6 +1,7 @@
-export interface iChirp {
-    id?:string;
-    user:string;
-    message:string;
+export interface IChirp {
+    id?: string;
+    user: string;
+    message: string;
     image?: string;
 }
+

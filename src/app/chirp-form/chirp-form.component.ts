@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 
-import { iChirp } from '../chirpInterface';
+import { IChirp } from '../chirpInterface';
 import { ChirpService } from '../services/chirp.service';
 
 @Component({

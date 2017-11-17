@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
-import { iChirp } from '../chirpInterface';
+import { IChirp } from '../chirpInterface';
 
 @Injectable()
 export class ChirpService {
@@ -12,7 +12,7 @@ export class ChirpService {
 
     }
 
-    chirps: Array<iChirp> = [];
+    chirps: Array<IChirp> = [];
 
     getChirps() {
 

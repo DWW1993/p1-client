@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { iChirp } from './chirpInterface';
+import { IChirp } from './chirpInterface';
 import { ChirpService } from './services/chirp.service';
 import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { NgForOf } from '@angular/common';
 import { ChirpService } from '../services/chirp.service';
-import { iChirp } from '../chirpInterface';
+import { IChirp } from '../chirpInterface';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +9,7 @@ import { iChirp } from '../chirpInterface';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  chirps: iChirp[];
+  chirps: IChirp[];
 
   constructor(private chirpService: ChirpService,
   ) { }
