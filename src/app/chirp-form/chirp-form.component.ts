@@ -20,15 +20,22 @@ export class ChirpFormComponent implements OnInit {
     private chirpService: ChirpService
   ) {
     this.form = this.fb.group({
-    message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
-    image: ['']
+      message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
+      image: ['']
     });
   }
 
   ngOnInit(): void {
   }
 
-  testFunction() {
-    console.log('Button Working');
+  randomId(): number {
+    return Math.floor(Math.random() * 10000);
+
+  }
+
+  public newChirp(handler: string, user: string, message: string): void {
+    const id = this.randomId();
+    const chirp = { id, handler, user, message };
+    this.router.navigate(['/list']);
   }
 }

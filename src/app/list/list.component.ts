@@ -21,7 +21,6 @@ export class ListComponent implements OnInit {
   getChirps(): void {
     this.chirpService.getChirps()
       .subscribe((response) => this.chirps = response);
-    
     }
 
   ngOnInit(): void {

@@ -1,18 +1,18 @@
-<div class="example-container">
+<mat-card class='form-container'>
+  <mat-form-field color='primary'>
+    <input #handler matInput placeholder='Handle'>
+  </mat-form-field>
+  
   <mat-form-field>
-    <input matInput placeholder="Input">
+    <input #user matInput placeholder='User'>
   </mat-form-field>
 
   <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
+    <textarea #message matInput placeholder='Chirp' id='textArea'></textarea>
   </mat-form-field>
 
-  <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
+  <button (click)='newChirp(handler.value, user.value, message.value)' mat-button style='color: #5D535E'>Send</button>
+</mat-card>
 
 
 
