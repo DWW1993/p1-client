@@ -10,21 +10,23 @@ import { NgForOf } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
-import { SingleComponent } from './single/single.component';
+import { SignupComponent } from './signup/signup.component';
 import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 import { LoginComponent } from './login/login.component';
 import { ChirpService } from './services/chirp.service';
 import { AppRoutingModule } from './app-routing.module';
 import { FormBuilder } from '@angular/forms/src/form_builder';
+import { UserAccountComponent } from './user-account/user-account.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    SingleComponent,
+    SignupComponent,
     ChirpFormComponent,
     LoginComponent,
+    UserAccountComponent,
   ],
   imports: [
     BrowserModule,

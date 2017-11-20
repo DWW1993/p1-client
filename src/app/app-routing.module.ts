@@ -5,12 +5,13 @@ import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { ChirpFormComponent } from './chirp-form/chirp-form.component';
-import { SingleComponent } from './single/single.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserAccountComponent } from './user-account/user-account.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: SignupComponent
   },
   {
     path: 'chirp-form',
@@ -21,8 +22,12 @@ const appRoutes: Routes = [
     component: ListComponent
   },
   {
-    path: 'single/:id',
-    component: SingleComponent
+    path: 'user-account',
+    component: UserAccountComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
