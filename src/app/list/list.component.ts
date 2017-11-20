@@ -18,13 +18,13 @@ export class ListComponent implements OnInit {
   ) { }
 
 
-  getChirps(): void {
-    this.chirpService.getChirps()
+  spGetChirps(): void {
+    this.chirpService.spGetChirps()
       .subscribe((response) => this.chirps = response);
     }
 
   ngOnInit(): void {
-    this.getChirps();
+    this.spGetChirps();
     }
   }
 

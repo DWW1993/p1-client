@@ -15,19 +15,19 @@ export class ChirpService {
 
     chirps: Array<IChirp> = [];
 
-    getChirps() {
+    spGetChirps(): Observable<any> {
         return this.http.get(this.api);
     }
 
-    getChirp(id: string) {
+    spGetChirp(id: string): Observable<any> {
         return this.http.get(`${this.api}/${id}`);
     }
 
-    deleteChirp(id: string) {
+    spDeleteChirp(id: string): Observable<any> {
         return this.http.delete(`${this.api}/${id}`);
     }
 
-    createChirp(chirp: IChirp): Observable<any> {
+    spCreateChirp(chirp: IChirp): Observable<any> {
         return this.http.post(this.api, chirp);
     }
 }
