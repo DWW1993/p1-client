@@ -1,4 +1,4 @@
-<mat-card *ngFor='let chirp of chirps' appCardHover [routerLink]="['/single', chirp.id]" class='chirp-card'>
+<mat-card *ngFor='let chirp of chirps' class='chirp-card'>
 <ng-container (click)='getChirp($event)'>
   <mat-card-title>{{ chirp.name }}</mat-card-title>
   <mat-card-subtitle>@{{ chirp.user }}</mat-card-subtitle>
