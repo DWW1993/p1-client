@@ -17,6 +17,7 @@ import { ChirpService } from './services/chirp.service';
 import { AppRoutingModule } from './app-routing.module';
 import { FormBuilder } from '@angular/forms/src/form_builder';
 import { UserAccountComponent } from './user-account/user-account.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { UserAccountComponent } from './user-account/user-account.component';
     ChirpFormComponent,
     LoginComponent,
     UserAccountComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
