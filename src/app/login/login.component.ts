@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     });
    }
 
-//   ngOnInit() {
+  ngOnInit() {
 // this.userService.spGetUsers()
 // .subscribe((response)=>this.users=response);
 
