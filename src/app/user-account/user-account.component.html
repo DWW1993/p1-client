@@ -1,8 +1,20 @@
 <div id="profile-div">
-  <mat-card class = "profile-card">
+  <mat-card class="profile-card">
     <mat-card-header>
-        <mat-card-title>{{username}}</mat-card-title>
-        <mat-card-subtitle>@{{handle}}</mat-card-subtitle>
+      <mat-card-title>
+        <h2>Username</h2>
+      </mat-card-title>
+      <mat-card-subtitle style="text-align: center">@Handle</mat-card-subtitle>
     </mat-card-header>
+    <mat-card-content>
+      <p>
+        Welcome to Chirpster here we believe in connecting the people from across the street to people across the globe. Get Chirping to let everyone know what you think.
+      </p>
+    </mat-card-content>
+    <br>
+    <br>
+    <mat-card-actions>
+      <button mat-button>Send Chirp</button>
+    </mat-card-actions>
   </mat-card>
 </div>
