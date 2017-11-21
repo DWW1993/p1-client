@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { IUser } from '../userInterface'
-import * as UserService from '../services/user.service';
+import {UserService} from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -14,16 +14,17 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private getUsers: UserService.spGetUsers,
+    private UserService:UserService
   ) {
     this.form = this.fb.group({
       user: ['', Validators.required],
       email: ['', Validators.required]
     });
-    let users:Array<IUser>= [];
+    let users: Array<IUser> = [];
    }
 
   ngOnInit() {
+    // spGetUsers()
   }
 
 
