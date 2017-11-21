@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
-import { IUser } from '../userInterface'
+import { IUser } from '../userInterface';
 import {UserService} from '../services/user.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private UserService:UserService
+    private UserService: UserService
   ) {
     this.form = this.fb.group({
       user: ['', Validators.required],
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {
-    // spGetUsers()
+    // UserService.spGetUsers()
   }
 
 

@@ -12,7 +12,6 @@ export class UserService {
       constructor (private http: HttpClient) {
 
       }
-
       chirps: Array<IUser> = [];
 
       spGetUsers(): Observable<any> {
