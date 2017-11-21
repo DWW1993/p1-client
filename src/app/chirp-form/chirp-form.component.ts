@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 
 import { IChirp } from '../chirpInterface';
 import { ChirpService } from '../services/chirp.service';
+// import { SinglePopupComponent } from '../single-popup/single-popup.component';
+import { ListComponent } from '../list/list.component';
 
 @Component({
   selector: 'app-chirp-form',
@@ -19,9 +21,10 @@ export class ChirpFormComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private chirpService: ChirpService
-  ) {
-    this.form = this.fb.group({
+    private chirpService: ChirpService,
+    // private single: SinglePopupComponent
+  ) { this.form = this.fb.group({
+      userId: ['', Validators.required],
       message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
     });
   }
@@ -29,13 +32,11 @@ export class ChirpFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  randomId(): number {
-    return Math.floor(Math.random() * 10000);
-
-  }
+  // randomId(): number {
+  //   return Math.floor(Math.random() * 10000);
+  // }
 
   createChirp(userId: number, message: string): void {
-    const id = this.randomId()
     let newChirp = (this.form.value)
     console.log(newChirp)
     this.chirpService.createChirp(newChirp)
