@@ -7,27 +7,28 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ChirpService {
 
-    private api = 'http://localhost:3000/api/chirps';
+    public api = 'http://localhost:3000/api/chirps';
+    
 
-    constructor (private http: HttpClient) {
+    constructor (public http: HttpClient) {
 
     }
 
-    chirps: Array<IChirp> = [];
+    chirps: Array<any> = [];
 
-    spGetChirps(): Observable<any> {
+    getChirps(): Observable<any> {
         return this.http.get(this.api);
     }
 
-    spGetChirp(id: string): Observable<any> {
+    getChirp(id: string): Observable<any> {
         return this.http.get(`${this.api}/${id}`);
     }
 
-    spDeleteChirp(id: string): Observable<any> {
+    deleteChirp(id: string): Observable<any> {
         return this.http.delete(`${this.api}/${id}`);
     }
 
-    spCreateChirp(chirp: IChirp): Observable<any> {
+    createChirp(chirp: any): Observable<any> {
         return this.http.post(this.api, chirp);
     }
 }

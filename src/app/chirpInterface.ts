@@ -1,8 +1,6 @@
 export interface IChirp {
     id?: string;
-    handle: string;
-    user: string;
+    userId: string;
     message: string;
-    image?: string;
 }
 

@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
 
 import { IChirp } from '../chirpInterface';
 import { ChirpService } from '../services/chirp.service';
@@ -21,7 +23,6 @@ export class ChirpFormComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
-      image: ['']
     });
   }
 
@@ -33,9 +34,16 @@ export class ChirpFormComponent implements OnInit {
 
   }
 
-  public newChirp(handler: string, user: string, message: string): void {
-    const id = this.randomId();
-    const chirp = { id, handler, user, message };
-    this.router.navigate(['/list']);
-  }
+  createChirp(userId: number, message: string): void {
+    const id = this.randomId()
+    let newChirp = (this.form.value)
+    console.log(newChirp)
+    this.chirpService.createChirp(newChirp)
+      .subscribe(id => {
+        newChirp.id = id
+        this.router.navigate(['/list']);
+        console.log('chirp sent')
+      })
+  };
+
 }
