@@ -4,7 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatMenuModule, MatIconModule } from '@angular/material';
 import {  MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule } from '@angular/material';
 import { NgForOf } from '@angular/common';
 
@@ -49,6 +49,7 @@ import { SinglePopupComponent } from './single-popup/single-popup.component';
     MatSelectModule,
     MatToolbarModule,
     MatMenuModule,
+    MatIconModule
   ],
   providers: [
     ChirpService,
