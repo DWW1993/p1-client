@@ -30,5 +30,5 @@ export class UserService {
       spCreateUser(user:IUser): Observable<any> {
           return this.http.post(this.api, user);
       }
-
+//user
 }
