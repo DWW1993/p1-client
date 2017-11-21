@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import{ HttpClient } from '@angular/common/http'; 
 import 'rxjs/add/operator/map';
+import{ IUser } from '../userInterface';
 
 
 @Injectable()
@@ -12,18 +13,18 @@ export class UserService {
   
       }
   
-      chirps: Array<IChirp> = [];
+      chirps: Array<IUser> = [];
   
       spGetUsers(): Observable<any> {
           return this.http.get(this.api);
       }
   
-      spGetUser(id: string): Observable<any> {
-          return this.http.get(`${this.api}/${id}`);
+      spGetUser(id:number): Observable<any> {
+          return this.http.get(`${this.api}/${+id}`);
       }
   
-      spDeleteUserid: string): Observable<any> {
-          return this.http.delete(`${this.api}/${id}`);
+      spDeleteUser (id:number): Observable<any> {
+          return this.http.delete(`${this.api}/${+id}`);
       }
   
       spCreateUser(user:IUser): Observable<any> {
