@@ -1,7 +1,7 @@
 <mat-card *ngFor='let chirp of chirps' class='chirp-card'>
 <ng-container (click)='getChirp($event)'>
   <mat-card-title>{{ chirp.handle }}</mat-card-title>
-  <mat-card-subtitle>@{{ chirp.username }}</mat-card-subtitle>
+  <mat-card-subtitle>@{{ chirp.handle }}</mat-card-subtitle>
   <mat-card-content><p>{{ chirp.message }}</p></mat-card-content>
 </ng-container>
 </mat-card>
