@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
-import { ChirpService } from '../services/chirp.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,22 +14,22 @@ export class SignupComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private svc: ChirpService
-  ) {
-    this.form = this.fb.group ({
-      name: ['', Validators.required],
-      username: ['', Validators.required],
-      email: ['', Validators.compose([Validators.required, Validators.email])],
-      password: ['', Validators.required],
+    private svc: UserService
+  ) { this.form = this.fb.group ({
+      handle: ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(30)])],
+      username: ['', Validators.compose([Validators.required, Validators.maxLength(30)])],
+      email: ['', Validators.compose([Validators.required, Validators.email, Validators.maxLength(30)])],
+      password: ['', Validators.compose([Validators.required, Validators.maxLength(30)])],
     });
    }
 
   ngOnInit() {
   }
 
-  spGetChirp() {
-    const newChirp = (this.form.value);
-    this.svc.createChirp(newChirp)
+  createUser() {
+    const newUser = (this.form.value);
+    this.svc.CreateUser(newUser)
     .subscribe();
   }
+
 }

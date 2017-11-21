@@ -14,19 +14,19 @@ export class UserService {
       }
       users: Array<IUser> = []
 
-      spGetUsers(): Observable<any> {
+      GetUsers(): Observable<any> {
           return this.http.get(this.api);
       }
 
-      spGetUser(id: number): Observable<any> {
+      GetUser(id: number): Observable<any> {
           return this.http.get(`${this.api}/${+id}`);
       }
 
-      spDeleteUser (id: number): Observable<any> {
+      DeleteUser (id: number): Observable<any> {
           return this.http.delete(`${this.api}/${+id}`);
       }
 
-      spCreateUser(user: IUser): Observable<any> {
+      CreateUser(user: IUser): Observable<any> {
           return this.http.post(this.api, user);
       }
 }

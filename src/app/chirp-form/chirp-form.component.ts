@@ -32,16 +32,11 @@ export class ChirpFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // randomId(): number {
-  //   return Math.floor(Math.random() * 10000);
-  // }
-
-  createChirp(userId: number, message: string): void {
+  createChirp(): void {
     let newChirp = (this.form.value)
     console.log(newChirp)
     this.chirpService.createChirp(newChirp)
-      .subscribe(id => {
-        newChirp.id = id
+      .subscribe(() => {
         this.router.navigate(['/list']);
         console.log('chirp sent')
       })

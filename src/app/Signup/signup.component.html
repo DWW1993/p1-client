@@ -1,13 +1,19 @@
 <mat-card style='color: #EC96A4' class='chirp-card'>
   <h2 class='h2' style='color: #5D535E'>CREATE ACCOUNT</h2>
-  <form novalidate [formGroup]='form' (ngSubmit)='spGetChirp()'>
+  <form novalidate [formGroup]='form' (ngSubmit)='createUser()'>
     <mat-form-field>
-      <input matInput placeholder='Email'>
+      <input matInput name = "email" formControlName = "email" placeholder='Email'>
     </mat-form-field>
-
     <mat-form-field>
-      <input matInput placeholder='Password'>
+      <input matInput name = "password" formControlName = "password" placeholder='Password'>
     </mat-form-field>
-    <button mat-button style='color: #5D535E' routerLink='../user-account'>Sign Up</button>
+    <br>
+    <mat-form-field>
+      <input matInput name = "username" formControlName = "username" placeholder='Username'>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name = "handle" formControlName = "handle" placeholder='Handle'>
+    </mat-form-field>
+    <button mat-button style='color: #5D535E'>Sign Up</button>
   </form>
 </mat-card>
