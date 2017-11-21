@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       user: ['', Validators.required],
       email: ['', Validators.required]
     });
-    let users: Array<IUser> = [];
+    const users: Array<IUser> = [];
    }
 
   ngOnInit() {
