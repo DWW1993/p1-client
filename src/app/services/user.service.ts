@@ -1,34 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import{ HttpClient } from '@angular/common/http'; 
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
-import{ IUser } from '../userInterface';
+import { IUser } from '../userInterface';
 
 
 @Injectable()
 export class UserService {
   private api = 'http://localhost:3000/api/users';
-  
+
       constructor (private http: HttpClient) {
-  
+
       }
-  
+
       chirps: Array<IUser> = [];
-  
+
       spGetUsers(): Observable<any> {
           return this.http.get(this.api);
       }
-  
-      spGetUser(id:number): Observable<any> {
+
+      spGetUser(id: number): Observable<any> {
           return this.http.get(`${this.api}/${+id}`);
       }
-  
-      spDeleteUser (id:number): Observable<any> {
+
+      spDeleteUser (id: number): Observable<any> {
           return this.http.delete(`${this.api}/${+id}`);
       }
-  
-      spCreateUser(user:IUser): Observable<any> {
+
+      spCreateUser(user: IUser): Observable<any> {
           return this.http.post(this.api, user);
       }
-//user
+// user
 }
