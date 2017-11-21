@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormBuilder } from '@angular/forms/src/form_builder';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
+import { SinglePopupComponent } from './single-popup/single-popup.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { FollowersComponent } from './followers/followers.component';
     LoginComponent,
     UserAccountComponent,
     FollowersComponent,
+    SinglePopupComponent,
   ],
   imports: [
     BrowserModule,
