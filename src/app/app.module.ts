@@ -47,7 +47,7 @@ import { SinglePopupComponent } from './single-popup/single-popup.component';
     MatInputModule,
     MatSelectModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [
     ChirpService
