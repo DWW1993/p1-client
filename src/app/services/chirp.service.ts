@@ -31,5 +31,9 @@ export class ChirpService {
     createChirp(chirp: any): Observable<any> {
         return this.http.post(this.api, chirp);
     }
+
+    getChirpsByUser(id: string): Observable<any> {
+        return this.http.get(`${this.api}/user/${id}`);
+    }
 }
 
