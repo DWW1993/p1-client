@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
 
   spGetChirp() {
     const newChirp = (this.form.value);
-    this.svc.spCreateChirp(newChirp)
+    this.svc.createChirp(newChirp)
     .subscribe();
   }
 }
