@@ -14,18 +14,20 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private UserService: UserService
+    private userService: UserService,
+    private users: Array<IUser>=[]
   ) {
     this.form = this.fb.group({
       user: ['', Validators.required],
       email: ['', Validators.required]
     });
-    let users: Array<IUser> = [];
+
    }
 
-  ngOnInit() {
-    // UserService.spGetUsers()
-  }
+//   ngOnInit() {
+// this.userService.spGetUsers()
+// .subscribe((response)=>this.users=response);
 
+  }
 
 }
