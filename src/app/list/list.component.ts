@@ -3,7 +3,6 @@ import { NgForOf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatDialog, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
-
 import { ChirpService } from '../services/chirp.service';
 import { IChirp } from '../chirpInterface';
 import { SinglePopupComponent } from '../single-popup/single-popup.component';

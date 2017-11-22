@@ -9,6 +9,7 @@ import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
+import { UsersComponent } from "./users/users.component";
 
 const appRoutes: Routes = [
   {
@@ -34,6 +35,10 @@ const appRoutes: Routes = [
   {
     path: 'followers',
     component: FollowersComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent
   }
 ];
 

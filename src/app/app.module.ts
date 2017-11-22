@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
 import { SinglePopupComponent } from './single-popup/single-popup.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { SinglePopupComponent } from './single-popup/single-popup.component';
     UserAccountComponent,
     FollowersComponent,
     SinglePopupComponent,
+    UsersComponent,
   ],
   entryComponents: [SinglePopupComponent],
   imports: [

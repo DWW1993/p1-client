@@ -22,7 +22,6 @@ export class ChirpFormComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private chirpService: ChirpService,
-    private single: SinglePopupComponent
   ) { this.form = this.fb.group({
         userId: ['', Validators.required],
         message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
