@@ -40,10 +40,6 @@ const appRoutes: Routes = [
   {
     path: 'users',
     component: UsersComponent
-  },
-  {
-    path: 'test',
-    component: LogSignComponent
   }
 ];
 

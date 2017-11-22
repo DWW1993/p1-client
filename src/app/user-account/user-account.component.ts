@@ -22,13 +22,13 @@ export class UserAccountComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.paramMap
-    .switchMap((params: ParamMap) => {
-      return this.svc.getChirpsByUser(params.get('id'))
-    })
-    .subscribe((Response) => {
-      this.chirps = Response.body;
-    })
+    // this.route.paramMap
+    // .switchMap((params: ParamMap) => {
+    //   return this.svc.getChirpsByUser(params.get('id'))
+    // })
+    // .subscribe((Response) => {
+    //   this.chirps = Response.body;
+    // })
   }
 
 }

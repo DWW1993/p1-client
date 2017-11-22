@@ -22,7 +22,6 @@ import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
 import { SinglePopupComponent } from './single-popup/single-popup.component';
 import { UsersComponent } from './users/users.component';
-import { LogSignComponent } from './log-sign/log-sign.component';
 
 
 @NgModule({
@@ -35,8 +34,7 @@ import { LogSignComponent } from './log-sign/log-sign.component';
     UserAccountComponent,
     FollowersComponent,
     SinglePopupComponent,
-    UsersComponent,
-    LogSignComponent,
+    UsersComponent
   ],
   entryComponents: [SinglePopupComponent],
   imports: [
