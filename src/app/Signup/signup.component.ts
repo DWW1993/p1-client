@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
 
   createUser() {
     const newUser = (this.form.value);
-    this.svc.CreateUser(newUser)
+    this.svc.createUser(newUser)
     .subscribe();
   }
 

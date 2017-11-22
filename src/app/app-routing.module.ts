@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
 import { UsersComponent } from "./users/users.component";
+import { LogSignComponent } from "./log-sign/log-sign.component";
 
 const appRoutes: Routes = [
   {
@@ -39,6 +40,10 @@ const appRoutes: Routes = [
   {
     path: 'users',
     component: UsersComponent
+  },
+  {
+    path: 'test',
+    component: LogSignComponent
   }
 ];
 

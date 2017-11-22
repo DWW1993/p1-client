@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatMenuModule, MatIconModule, MatDialogModule } from '@angular/material';
 import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule } from '@angular/material';
 import { NgForOf } from '@angular/common';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, } from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatButtonToggle, MatButtonToggleModule } from '@angular/material';
 import { FormBuilder } from '@angular/forms/src/form_builder';
 
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
 import { SinglePopupComponent } from './single-popup/single-popup.component';
 import { UsersComponent } from './users/users.component';
+import { LogSignComponent } from './log-sign/log-sign.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { UsersComponent } from './users/users.component';
     FollowersComponent,
     SinglePopupComponent,
     UsersComponent,
+    LogSignComponent,
   ],
   entryComponents: [SinglePopupComponent],
   imports: [
@@ -54,7 +56,8 @@ import { UsersComponent } from './users/users.component';
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonToggleModule
   ],
   providers: [
     ChirpService,
