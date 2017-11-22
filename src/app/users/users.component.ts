@@ -11,10 +11,18 @@ import { IUser } from '../UserInterface';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+  users: any;
 
-  constructor() { }
+  constructor(private UserService: UserService) { }
+  
+  getUsers(): void {
+    this.UserService.getUsers()
+    .subscribe((response) => this.users = response);
+  }
 
   ngOnInit() {
+    this.getUsers();
   }
+
 
 }

@@ -10,24 +10,23 @@ import { IUser } from '../userInterface';
 export class UserService {
     private api = 'http://localhost:3000/api/users';
 
-    constructor (private http: HttpClient) {
-    }
+    constructor (private http: HttpClient) { }
 
     users: Array<IUser> = []
 
-    GetUsers(): Observable<any> {
+    getUsers(): Observable<any> {
         return this.http.get(this.api);
     }
 
-    GetUser(id: number): Observable<any> {
+    getUser(id: number): Observable<any> {
         return this.http.get(`${this.api}/${+id}`);
     }
 
-    DeleteUser (id: number): Observable<any> {
+    deleteUser (id: number): Observable<any> {
         return this.http.delete(`${this.api}/${+id}`);
     }
 
-    CreateUser(user: IUser): Observable<any> {
+    createUser(user: IUser): Observable<any> {
         return this.http.post(this.api, user);
     }
 }

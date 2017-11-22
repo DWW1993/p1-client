@@ -15,7 +15,6 @@ import { SinglePopupComponent } from '../single-popup/single-popup.component';
 
 export class ListComponent implements OnInit {
   chirps: any;
-  name: string;
 
   constructor(
     private chirpService: ChirpService, 
