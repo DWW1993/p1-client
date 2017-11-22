@@ -1,5 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from '@angular/material';
+
+import { ListComponent } from '../list/list.component';
 
 @Component({
   selector: 'app-single-popup',
@@ -8,14 +10,12 @@ import {MAT_DIALOG_DATA, MatDialog} from '@angular/material';
 })
 export class SinglePopupComponent {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialogRef: MatDialogRef<ListComponent>, 
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) { }
 
-  openSingle() {
-    // this.dialog.open(!place!holder! {
-    //   data: {
-    //     animal: 'panda'
-    //   }
-    // });
+  onNoClick(): void {
+    this.dialogRef.close();
   }
-
 }

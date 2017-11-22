@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
+import { Observable, Subscription } from 'rxjs/Rx';
+
 import { IChirp } from '../chirpInterface';
 import { IUser } from '../userInterface';
 import { UserService } from '../services/user.service';
 import { ChirpService } from '../services/chirp.service';
-import { Observable, Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-user-account',

@@ -1,13 +1,12 @@
 <mat-card class='chirp-card'>
   <h2 class='h2' style='color: white'>Sign In</h2>
-<mat-form-field>
-  <input matInput placeholder='Username'>
-</mat-form-field>
-<mat-form-field>
-  <input matInput placeholder='Email'>
-</mat-form-field>
-<mat-form-field>
-  <input matInput placeholder='Password'>
-</mat-form-field>
-<button mat-button style='color:white' routerLink='/user-account'>LOGIN</button>
+  <form novalidate [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder='Email' name="email" formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder='Password' name="password" formControlName="password">
+    </mat-form-field>
+    <button mat-button routerLink='/user-account'>LOGIN</button>
+  </form>
 </mat-card>

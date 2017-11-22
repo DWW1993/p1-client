@@ -4,9 +4,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatMenuModule, MatIconModule } from '@angular/material';
-import {  MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatMenuModule, MatIconModule, MatDialogModule } from '@angular/material';
+import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule } from '@angular/material';
 import { NgForOf } from '@angular/common';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, } from '@angular/material';
+import { FormBuilder } from '@angular/forms/src/form_builder';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
@@ -16,7 +18,6 @@ import { LoginComponent } from './login/login.component';
 import { ChirpService } from './services/chirp.service';
 import {UserService} from './services/user.service';
 import { AppRoutingModule } from './app-routing.module';
-import { FormBuilder } from '@angular/forms/src/form_builder';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { FollowersComponent } from './followers/followers.component';
 import { SinglePopupComponent } from './single-popup/single-popup.component';
@@ -33,6 +34,7 @@ import { SinglePopupComponent } from './single-popup/single-popup.component';
     FollowersComponent,
     SinglePopupComponent,
   ],
+  entryComponents: [SinglePopupComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -49,7 +51,8 @@ import { SinglePopupComponent } from './single-popup/single-popup.component';
     MatSelectModule,
     MatToolbarModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [
     ChirpService,

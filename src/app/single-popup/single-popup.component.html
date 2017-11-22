@@ -1,3 +1,9 @@
 <p>
-  single-popup works!
+  <mat-card class='chirp-card'>
+    <ng-container>
+      <mat-card-title>{{ data.handle }}</mat-card-title>
+      <mat-card-subtitle>@{{ data.username }}</mat-card-subtitle>
+      <mat-card-content><p>{{ data.message }}</p></mat-card-content>
+    </ng-container>
+    </mat-card>
 </p>

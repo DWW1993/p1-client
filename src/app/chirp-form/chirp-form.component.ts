@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 import { IChirp } from '../chirpInterface';
 import { ChirpService } from '../services/chirp.service';
-// import { SinglePopupComponent } from '../single-popup/single-popup.component';
+import { SinglePopupComponent } from '../single-popup/single-popup.component';
 import { ListComponent } from '../list/list.component';
 
 @Component({
@@ -22,10 +22,10 @@ export class ChirpFormComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private chirpService: ChirpService,
-    // private single: SinglePopupComponent
+    private single: SinglePopupComponent
   ) { this.form = this.fb.group({
-      userId: ['', Validators.required],
-      message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
+        userId: ['', Validators.required],
+        message: ['', Validators.compose([Validators.required, Validators.maxLength(280)])],
     });
   }
 
