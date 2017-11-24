@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
 
   openSingle(chirp): void {
     let dialogRef = this.dialog.open(SinglePopupComponent, {
-      width: '300px',
+      width: '40em',
       height: '400px',
       data: { 
         handle: chirp.handle,
