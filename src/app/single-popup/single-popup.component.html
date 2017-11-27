@@ -1,8 +1,8 @@
 <p>
   <mat-card class='chirp-card'>
     <ng-container>
-      <mat-card-title>{{ data.handle }}</mat-card-title>
-      <mat-card-subtitle>@{{ data.username }}</mat-card-subtitle>
+      <mat-card-title [routerLink]="['/user', data.userId]" (click)="onNoClick()">{{ data.handle }}</mat-card-title>
+      <mat-card-subtitle [routerLink]="['/user', data.userId]" (click)="onNoClick()">@{{ data.username }}</mat-card-subtitle>
       <mat-card-content>
         <p>{{ data.message }}</p>
         <button (click)="deleteChirp(data.id)" (click)="refresh()">Delete</button>

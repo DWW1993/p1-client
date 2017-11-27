@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Routes, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { Observable, Subscription } from 'rxjs/Rx';
+import 'rxjs/add/operator/switchMap';
+import { Location } from '@angular/common';
 
 import { IChirp } from '../chirpInterface';
 import { IUser } from '../userInterface';
@@ -13,20 +15,25 @@ import { ChirpService } from '../services/chirp.service';
   styleUrls: ['./user-account.component.scss']
 })
 export class UserAccountComponent implements OnInit {
-  users: any;
+  @Input() users: any;
 
   constructor(
-    private svc: ChirpService,
-    private userSvc: UserService,
+    private chirpService: ChirpService,
+    private userService: UserService,
+    private route: ActivatedRoute,
+    private location: Location
   ) { }
 
-  getUsers(): void {
-    this.userSvc.getUsers()
-      .subscribe((response) => this.users = response);
-    }
+  // getUsers(): void {
+  //   this.userService.getUsers()
+  //     .subscribe((response) => this.users = response);
+  // }
 
   ngOnInit() {
-    this.getUsers();
+    this.route.paramMap
+    .switchMap((params: ParamMap) => this.userService.getUser(<any>params.get('id')))
+    .subscribe(user => this.users = user);
+    console.log(this.users)
   }
 
 }

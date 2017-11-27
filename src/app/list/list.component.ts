@@ -31,7 +31,8 @@ export class ListComponent implements OnInit {
         handle: chirp.handle,
         username: chirp.username,
         message: chirp.message,
-        id: chirp.id
+        id: chirp.id,
+        userId: chirp.userId
       }
     });
   }
