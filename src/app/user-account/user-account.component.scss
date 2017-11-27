@@ -1,9 +1,9 @@
-.profile-card {
-    width: 60em;
+.user-card {
+    width: 30em;
     margin: 0em auto 1em; 
     text-align: left;
     padding: 2em;
-    height: 20em;
+    height: 6em;
 }
 
 #bgimg{
@@ -19,4 +19,9 @@
     width: 30em;
     text-align: left;
     padding: 2em;
+}
+
+.online {
+    background-image: url('http://www.clipartmasters.com/clip-arts/783/green-circle-clip-art-783381.png');
+    background-size: cover;
 }
