@@ -6,12 +6,12 @@
 </mat-toolbar>
 
 <mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink='/user-account'>Profile</button>
   <button mat-menu-item routerLink='/chirp-form'>Chirp</button>
   <button mat-menu-item routerLink='/list'>Thread</button>
-  <button mat-menu-item routerLink='/user-account'>Profile</button>
   <button mat-menu-item routerLink='/followers'>Follower Thread</button>
+  <button mat-menu-item routerLink='/users'>Followers</button>
   <button mat-menu-item routerLink='/login'>Logout</button>
-  <button mat-menu-item routerLink='/users'>Users</button>
 </mat-menu>
 
 <router-outlet></router-outlet>
