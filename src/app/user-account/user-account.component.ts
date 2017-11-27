@@ -13,22 +13,20 @@ import { ChirpService } from '../services/chirp.service';
   styleUrls: ['./user-account.component.scss']
 })
 export class UserAccountComponent implements OnInit {
-  chirps: Array<IChirp> = [];
+  users: any;
 
   constructor(
     private svc: ChirpService,
     private userSvc: UserService,
-    private route: ActivatedRoute
   ) { }
 
+  getUsers(): void {
+    this.userSvc.getUsers()
+      .subscribe((response) => this.users = response);
+    }
+
   ngOnInit() {
-    // this.route.paramMap
-    // .switchMap((params: ParamMap) => {
-    //   return this.svc.getChirpsByUser(params.get('id'))
-    // })
-    // .subscribe((Response) => {
-    //   this.chirps = Response.body;
-    // })
+    this.getUsers();
   }
 
 }

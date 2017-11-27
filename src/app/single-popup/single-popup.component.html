@@ -3,7 +3,10 @@
     <ng-container>
       <mat-card-title>{{ data.handle }}</mat-card-title>
       <mat-card-subtitle>@{{ data.username }}</mat-card-subtitle>
-      <mat-card-content><p>{{ data.message }}</p></mat-card-content>
+      <mat-card-content>
+        <p>{{ data.message }}</p>
+        <button (click)="deleteChirp(data.id)" (click)="refresh()">Delete</button>
+      </mat-card-content>
     </ng-container>
     </mat-card>
 </p>
