@@ -1,27 +1,22 @@
 <img id="bgimg" src="https://k45.kn3.net/1D69903EC.jpg">
 <h1>Followers Online</h1>
-<mat-card *ngFor="let user of users" class="user-card">
+<div *ngIf="users">
+    <h1>{{ users.username }}</h1>
+    <p>{{ users.handle }}</p>
+    <p>{{ users.email }}</p>
+    <p>{{ users.id }}</p>
+</div>
+<!-- <mat-card *ngFor="let user of users" class="user-card">
   <ng-container>
     <div mat-card-avatar class="online"></div>
     <mat-card-title>{{ user.handle }}</mat-card-title>
   </ng-container>
-</mat-card>
-<mat-card *ngFor="let chirp of chirps" class="user-chirps">
+</mat-card> -->
+<!-- <mat-card *ngFor="let chirp of chirps" class="user-chirps">
   <ng-container>
     
   </ng-container>
-</mat-card>
-
-
-
-
-
-
-
-
-
-
-
+</mat-card> -->
 
 <!-- <div id="profile-div">
   <mat-card class="profile-card">
