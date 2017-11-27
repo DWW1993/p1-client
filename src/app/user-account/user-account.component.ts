@@ -16,7 +16,6 @@ import { ChirpService } from '../services/chirp.service';
 })
 export class UserAccountComponent implements OnInit {
   @Input() users: any;
-  users: any;
 
   constructor(
     private chirpService: ChirpService,

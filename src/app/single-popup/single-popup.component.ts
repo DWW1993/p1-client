@@ -31,8 +31,6 @@ export class SinglePopupComponent {
 
   deleteChirp(): void {
     this.chirpService.deleteChirp(this.data.id)
-      .subscribe(() => {
-
-      })
+      .subscribe(() => { })
   }
 }
