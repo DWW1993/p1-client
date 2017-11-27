@@ -2,16 +2,22 @@
 <mat-toolbar style='color: #EC96A4' class="mat-elevation-z2" id='toolbar'>
   <span>Chirpernator</span>
   <span class="space"></span>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <button><i class="material-icons" routerLink='/user-account'>home</i></button>
+  <button><i class="material-icons" routerLink='/chirp-form'>insert_comment</i></button>
+  <button><i class="material-icons" routerLink='/list'>event_note</i></button>
+  <button><i class="material-icons" routerLink='/followers'>people</i></button>
+  <button><i class="material-icons" routerLink='/users'>group_add</i></button>
+  <button routerLink='/login'>Logout</button>
+  <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
 </mat-toolbar>
 
-<mat-menu #menu="matMenu">
+<!-- <mat-menu #menu="matMenu">
   <button mat-menu-item routerLink='/chirp-form'>Chirp</button>
   <button mat-menu-item routerLink='/list'>Thread</button>
   <button mat-menu-item routerLink='/user-account'>Profile</button>
   <button mat-menu-item routerLink='/followers'>Follower Thread</button>
   <button mat-menu-item routerLink='/login'>Logout</button>
   <button mat-menu-item routerLink='/users'>Users Online</button>
-</mat-menu>
+</mat-menu> -->
 
 <router-outlet></router-outlet>
