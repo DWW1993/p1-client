@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router,
     private userService: UserService
-    // private users: Array<IUser>=[]
   ) { this.form = this.fb.group({
       email: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.required]
@@ -24,8 +24,12 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {
-// this.userService.spGetUsers()
-// .subscribe((response)=>this.users=response);
   }
 
+  login() {
+    this.userService.login(this.form.value.email, this.form.value.password)
+      .subscribe((user) => {
+        this.router.navigate(['/user', user.id]);
+      });
+  }
 }

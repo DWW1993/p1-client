@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Routes, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { Observable, Subscription } from 'rxjs/Rx';
 import 'rxjs/add/operator/switchMap';
 import { Location } from '@angular/common';
@@ -16,12 +16,14 @@ import { ChirpService } from '../services/chirp.service';
 })
 export class UserAccountComponent implements OnInit {
   @Input() users: any;
+  user: IUser;
 
   constructor(
     private chirpService: ChirpService,
     private userService: UserService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) { }
 
   // getUsers(): void {
@@ -30,10 +32,10 @@ export class UserAccountComponent implements OnInit {
   // }
 
   ngOnInit() {
-    this.route.paramMap
-    .switchMap((params: ParamMap) => this.userService.getUser(<any>params.get('id')))
-    .subscribe(user => this.users = user);
-    console.log(this.users)
+      this.userService.me(true)
+        .then((user: IUser) => {
+          this.user = user;
+        });     
   }
 
 }
