@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { NgForOf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatDialog, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { ChirpService } from '../services/chirp.service';
 import { IChirp } from '../chirpInterface';
@@ -18,7 +19,8 @@ export class ListComponent implements OnInit {
 
   constructor(
     private chirpService: ChirpService, 
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private route: ActivatedRoute,
   ) { }
 
   openSingle(chirp): void {
@@ -28,7 +30,8 @@ export class ListComponent implements OnInit {
       data: { 
         handle: chirp.handle,
         username: chirp.username,
-        message: chirp.message 
+        message: chirp.message,
+        id: chirp.id
       }
     });
   }
@@ -38,8 +41,13 @@ export class ListComponent implements OnInit {
       .subscribe((response) => this.chirps = response);
     }
 
+  deleteChirp(): void {
+    this.chirpService.deleteChirp(this.chirps.id)
+      .subscribe()
+  }
+
   ngOnInit(): void {
     this.getChirps();
     }
-  }
+}
 
