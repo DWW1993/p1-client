@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatMenuModule, MatIconModule, MatDialogModule, MatSidenav } from '@angular/material';
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule } from '@angular/material';
+import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { NgForOf } from '@angular/common';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatButtonToggle, MatButtonToggleModule } from '@angular/material';
 import { FormBuilder } from '@angular/forms/src/form_builder';
