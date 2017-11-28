@@ -1,7 +1,7 @@
 <mat-card *ngFor='let chirp of chirps' class='chirp-card' (click)="openSingle(chirp)">
 <ng-container>
-  <mat-card-title [routerLink]="['/user', chirp.userId]">{{ chirp.handle }}</mat-card-title>
-  <mat-card-subtitle [routerLink]="['/user', chirp.userId]">@{{ chirp.username }}</mat-card-subtitle>
+  <mat-card-title>{{ chirp.handle }}</mat-card-title>
+  <mat-card-subtitle>@{{ chirp.username }}</mat-card-subtitle>
   <mat-card-content>
     <p>{{ chirp.message }}</p>
   </mat-card-content>
