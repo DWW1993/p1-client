@@ -15,19 +15,20 @@ export class FollowersComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private followersService: FollowersService
+    // private followersService: FollowersService
   ) {}
 
   ngOnInit() {
     this.userService.me(true)
     .then((user: IUser) => {
       this.user = user;
-    });   
-    this.followersService.getFollowingChirps(this.user.id)
-    .subscribe((response) => {
-      this.followingChirps = response
-      console.log(this.followingChirps)
-    });  
-  }
+    });
+    console.log(this.user);
+    // this.followersService.getFollowingChirps(this.user.id)
+  //   .subscribe((response) => {
+  //     this.followingChirps = response
+  //     console.log(this.followingChirps)
+  //   });  
+   }
 
 }
