@@ -1,8 +1,8 @@
 <img id="bgimg" src="https://k45.kn3.net/1D69903EC.jpg">
-<div *ngIf="users">
-    <h1>{{ users.username }}</h1>
-    <p>{{ users.handle }}</p>
-    <p>{{ users.email }}</p>
+<div *ngIf="user">
+    <h1>{{ user.username }}</h1>
+    <p>{{ user.handle }}</p>
+    <p>{{ user.email }}</p>
 </div>
 <!-- <mat-card *ngFor="let user of users" class="user-card">
   <ng-container>

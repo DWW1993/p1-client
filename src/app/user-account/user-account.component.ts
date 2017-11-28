@@ -15,8 +15,7 @@ import { ChirpService } from '../services/chirp.service';
   styleUrls: ['./user-account.component.scss']
 })
 export class UserAccountComponent implements OnInit {
-  @Input() users: any;
-  user: IUser;
+  @Input() user: IUser;
 
   constructor(
     private chirpService: ChirpService,
