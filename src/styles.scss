@@ -1,26 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "_variables";
+@import "_mixins";
+@import "_global";
 
-* {
-    box-sizing: border-box;
-
-}
-
-.chirp-card {
-    width: 40em;
-    margin: 0em auto 1em; 
-    text-align: left;
-    padding: 2em;
-    background-color: #F1F1F2;
-}
-
-.bkg-color {
-    background-color: #EC96A4;
-    height: 80em;
-  }
-
-
-//   #9A9EAB;
-//   #5D535E;
-//   #EC96A4;
-//   #DFE166;

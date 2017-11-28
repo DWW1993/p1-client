@@ -1,0 +1,20 @@
+
+* {
+    box-sizing: border-box;
+    body{
+        background-color:$background-color;
+        .page{
+            width:85%;
+            @include borders;
+            @include mp0;
+            .chirp-card {
+                @include cards;
+                @include mp0;
+                @include borders;
+                text-align: left;
+            }
+        }
+
+      }
+}
+
