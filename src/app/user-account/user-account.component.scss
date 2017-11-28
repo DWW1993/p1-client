@@ -27,3 +27,48 @@
     background-image: url('http://www.clipartmasters.com/clip-arts/783/green-circle-clip-art-783381.png');
     background-size: cover;
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    background-color: white;
+    float:left;
+    margin-left: 2em;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.chirp-card {
+    margin: 0em auto 1em; 
+    text-align: left;
+    padding: 2em;
+    float: right;
+    margin-right: 10em;
+}
+
+
+
+.chirp-card {
+    width: 40em;
+    margin-right: 10em; 
+    text-align: left;
+    padding: 2em;
+    float:right;
+    display: block;
+}
+
+.bkg-color {
+    background-color: #EC96A4;
+    height: 80em;
+  }
+
+body {
+    background-color: #EC96A4;
+}
