@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     component: ListComponent
   },
   {
-    path: 'user/:id',
+    path: 'user',
     component: UserAccountComponent
   },
   {
