@@ -7,6 +7,11 @@
             width:85%;
             @include borders;
             @include mp0;
+            .toolbar{
+                @include borders;
+                color:$button-color;
+                background-color: $border-color;
+            }
 
         }
 
@@ -14,7 +19,16 @@
 }
 .chirp-card {
     @include cards;
-    @include mp0;
+    @include mp1;
     @include borders;
     text-align: left;
+    height: $card-height;
+}
+.form-card{
+    @include cards;
+    @include mp1;
+    @include borders;
+}
+.nav-buttong{
+    @include mp1;
 }
