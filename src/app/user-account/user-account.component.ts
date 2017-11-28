@@ -18,7 +18,6 @@ import { SinglePopupComponent } from '../single-popup/single-popup.component';
   styleUrls: ['./user-account.component.scss']
 })
 export class UserAccountComponent implements OnInit {
-<<<<<<< Updated upstream
   @Input() user: IUser;
 
   constructor(
@@ -27,16 +26,6 @@ export class UserAccountComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private router: Router
-=======
-  users: any;
-  chirps:any
-
-  constructor(
-    private chirpService: ChirpService,
-    private userSvc: UserService,
-    public dialog: MatDialog,
-    private route: ActivatedRoute,
->>>>>>> Stashed changes
   ) { }
 
   // getUsers(): void {
@@ -45,36 +34,16 @@ export class UserAccountComponent implements OnInit {
   // }
 
   ngOnInit() {
-<<<<<<< Updated upstream
       this.userService.me(true)
         .then((user: IUser) => {
           this.user = user;
         });     
-=======
-    this.getUsers();
-    this.getChirps();
   }
 
-
-
-  openSingle(chirp): void {
-    let dialogRef = this.dialog.open(SinglePopupComponent, {
-      width: '40em',
-      height: '400px',
-      data: { 
-        handle: chirp.handle,
-        username: chirp.username,
-        message: chirp.message,
-        id: chirp.id
-      }
-    });
->>>>>>> Stashed changes
-  }
-
-  getChirps(): void {
-    this.chirpService.getChirps()
-      .subscribe((response) => this.chirps = response);
-    }
+  // getChirps(): void {
+  //   this.chirpService.getChirps()
+  //     .subscribe((response) => this.chirps = response);
+  //   }
 
 
 }
