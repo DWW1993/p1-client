@@ -5,6 +5,40 @@
     <p>{{ user.email }}</p>
 </div>
 <!-- <mat-card *ngFor="let user of users" class="user-card">
+<div class="card">
+  <img src="../assets/lovelight.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Lovelight Cross</b></h4> 
+    <p>Software Engineer</p> 
+  </div>
+</div>
+
+<mat-card class="chirp-card">
+  <form novalidate [formGroup]="form" (ngSubmit)="createChirp()" class="chirp-card">
+    <mat-form-field>
+      <input matInput placeholder="Your userId" name="userId" formControlName="userId">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Your Chirp" rows="5" formControlName="message"name="message"></textarea>
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-button id="tweet">Post Your Chirp</button>
+    </mat-card-actions>
+  </form>
+  </mat-card>
+
+<mat-card *ngFor='let chirp of chirps' class='chirp-card' (click)="openSingle(chirp)">
+  <ng-container>
+    <mat-card-title>{{ chirp.handle }}</mat-card-title>
+    <mat-card-subtitle>@{{ chirp.username }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ chirp.message }}</p>
+    </mat-card-content>
+  </ng-container>
+  </mat-card>
+
+<!-- <h1>Followers Online</h1>
+<mat-card *ngFor="let user of users" class="user-card">
   <ng-container>
     <div mat-card-avatar class="online"></div>
     <mat-card-title>{{ user.handle }}</mat-card-title>
