@@ -7,14 +7,14 @@
             width:85%;
             @include borders;
             @include mp0;
-            .chirp-card {
-                @include cards;
-                @include mp0;
-                @include borders;
-                text-align: left;
-            }
+
         }
 
       }
 }
-
+.chirp-card {
+    @include cards;
+    @include mp0;
+    @include borders;
+    text-align: left;
+}

@@ -8,6 +8,9 @@ import { IChirp } from '../chirpInterface';
 import { IUser } from '../userInterface';
 import { UserService } from '../services/user.service';
 import { ChirpService } from '../services/chirp.service';
+import { MatDialog, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { SinglePopupComponent } from '../single-popup/single-popup.component';
+
 
 @Component({
   selector: 'app-user-account',
@@ -36,5 +39,11 @@ export class UserAccountComponent implements OnInit {
           this.user = user;
         });     
   }
+
+  // getChirps(): void {
+  //   this.chirpService.getChirps()
+  //     .subscribe((response) => this.chirps = response);
+  //   }
+
 
 }
